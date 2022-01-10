@@ -11,7 +11,6 @@ phone_input.addEventListener("click", (e) => {
 phone_input.addEventListener("input", (e) => {
     console.log(muted_click);
 
-    //console.log(e.target.value);
 })
 
 $(document).ready(function () {
@@ -210,19 +209,10 @@ function up_container_control(id, rows_len) {
         getir_collapsecontent.innerHTML = getir_all_container.innerHTML;
         document.getElementById("getirkey").value = getir_key;
         document.getElementById("getirrestaurantkey").value = getirrestaurantkey;
-
-        // button true
-
         success_button(1);
 
-        //
-
         getir_close = true;
-        //getir_all_container.style.display = "none";
-        //getir.style.display = "none";
-
-        //getir_up.style.display = "none";
-
+        
         console.log("Rows lentg getir : " + rows_len)
 
         if (rows_len - 1 == 2) {
@@ -260,11 +250,7 @@ function up_container_control(id, rows_len) {
         success_button(1);
 
         trendyol_close = true;
-        // trendyol_all_container.style.display = "none";
-        // trendyol.style.display = "none";
-
-        // trendyol_up.style.display = "none";
-
+       
         console.log("Rows lentg trendyol : " + rows_len)
 
         if (rows_len - 1 == 2) {
@@ -305,10 +291,6 @@ function up_container_control(id, rows_len) {
         success_button(1);
 
         yemeksepeti_close = true;
-        // yemeksepeti_all_container.style.display = "none";
-        // yemeksepeti.style.display = "none";
-
-        // yemeksepeti_up.style.display = "none";
 
         console.log("Rows lentg yemek : " + rows_len)
 
