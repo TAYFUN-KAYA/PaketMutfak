@@ -205,7 +205,7 @@ function up_container_control(id, rows_len) {
 
         console.log("Rows lentg getir : " + rows_len)
 
-        if (rows_len - 1 == 2) {
+        if (rows_len == 2) {
             if (!getir_close) {
                 trendyol_up.className = "col-md-6";
                 yemeksepeti_up.className = "col-md-6"
@@ -243,7 +243,7 @@ function up_container_control(id, rows_len) {
 
         console.log("Rows lentg trendyol : " + rows_len)
 
-        if (rows_len - 1 == 2) {
+        if (rows_len  == 2) {
             if (!trendyol_close) {
                 getir_up.className = "col-md-6";
                 yemeksepeti_up.className = "col-md-6"
@@ -284,7 +284,7 @@ function up_container_control(id, rows_len) {
 
         console.log("Rows lentg yemek : " + rows_len)
 
-        if (rows_len - 1 == 2) {
+        if (rows_len  == 2) {
             if (!yemeksepeti_close) {
                 trendyol_up.className = "col-md-6";
                 getir_up.className = "col-md-6"
