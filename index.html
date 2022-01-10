@@ -1,0 +1,279 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.4/css/all.css"
+        integrity="sha384-DyZ88mC6Up2uqS4h/KRgHuoeGwBcD4Ng9SiP4dIRy0EXTlnuz47vAwmeGwVChigm" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/bootstrap.css">
+
+    <link rel="stylesheet" href="/css/main.css">
+
+
+    <title>Hello, world!</title>
+</head>
+
+<body>
+
+
+
+    <div id="formcontainer" class="container">
+        <form>
+
+            <div class="mb-3 floating-label mb-4">
+                <input id="rest" class="form-control" placeholder=" " />
+                <label for="rest" class="fontstylecontent">Restoran Adı</label>
+            </div>
+
+
+            <div class="mb-3 floating-label mt-2 mb-2">
+                <input id="phonenumber" class="form-control" data-initial="+90" value="" placeholder=" " type="tel"
+                    name="phone" pattern="[0-9]{3}-[0-9]{2}-[0-9]{3}" maxlength="13" />
+                <label for="phonenumber" class="fontstylecontent">Restoran Telefon Numarası</label>
+            </div>
+
+            <hr class="hrtag">
+
+            
+
+
+            <div id="getir_acor" >
+                <p>
+
+                    <button class="collapseclass text-start fontstylecontent" type="button" data-toggle="collapse" data-target="#getircollapse"
+                        aria-expanded="false" aria-controls="getircollapse">
+                        Getir entegrasyonu tamamlandı.
+                        <i class="fas fa-chevron-down downicon" ></i>
+                    </button>
+                </p>
+                <div class="collapse mb-5 mt-5" id="getircollapse">
+                    <div id="getircollapsecontent" class="card card-body">
+                        
+
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="trendyol_acor">
+                <p>
+
+                    <button class="collapseclass text-start fontstylecontent" type="button" data-toggle="collapse" data-target="#trendyolcollapse"
+                        aria-expanded="false" aria-controls="trendyolcollapse">
+                        Trendyol yemek entegrasyonu tamamlandı.
+                        <i class="fas fa-chevron-down downicon" ></i>
+                    </button>
+                </p>
+                <div class="collapse mb-5 mt-5" id="trendyolcollapse">
+                    <div id="trendyolcollapsecontent" class="card card-body">
+                        
+                    </div>
+                </div>
+            </div>
+
+            <div id="yemeksepeti_acor">
+                <p>
+
+                    <button class="collapseclass text-start fontstylecontent" type="button" data-toggle="collapse"
+                        data-target="#yemeksepeticollapse" aria-expanded="false" aria-controls="yemeksepeticollapse">
+                        Yemeksepeti entegrasyonu tamamlandı.
+                        <i class="fas fa-chevron-down downicon" ></i>
+                    </button>
+                </p>
+                <div class="collapse mb-5 mt-5" id="yemeksepeticollapse">
+                    <div id="yemeksepeticollapsecontent" class="card card-body">
+                        
+                    </div>
+                </div>
+            </div>
+
+
+
+            <div id="content" class="row">
+                <div class="col">
+                    Lütfen Konfigurasyonu yapmak istediğiniz restoran yönetim panelini seçiniz
+                </div>
+            </div>
+
+            <br>
+
+
+            <div class="container-fluid">
+                <div id="rowschild" class="row">
+                    <div id="getirup" class="col-md-4">
+
+                        <div id="getir">
+                            <div class="form-check radiocontainer">
+                                <div class="container p-2">
+                                    <input class="form-check-input" type="radio" name="getirradio" id="getircheck">
+                                    <label class="form-check-label" for="getircheck">
+                                        Getir
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="trendyolup" class="col-md-4">
+                        <div id="trendyol">
+                            <div class="form-check radiocontainer">
+                                <div class="container p-2">
+                                    <input class="form-check-input" type="radio" name="trendyolradio"
+                                        id="trendyolcheck">
+                                    <label class="form-check-label" for="trendyolcheck">
+                                        Trendyol
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div id="yemeksepetiup" class="col-md-4">
+                        <div id="yemeksepeti">
+                            <div class="form-check radiocontainer">
+                                <div class="container p-2">
+                                    <input class="form-check-input" type="radio" name="yemeksepetiradio"
+                                        id="yemeksepeticheck">
+                                    <label class="form-check-label" for="yemeksepeticheck">
+                                        Yemeksepeti
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+
+                </div>
+            </div>
+
+
+
+            <hr class="hrtag">
+
+
+
+            <div id="getirallcontainer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="getirkey" class="form-control" placeholder=" " />
+                                <label for="getirkey" class="fontstylecontent">App Secret Key</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="getirrestaurantkey" class="form-control" placeholder=" " />
+                                <label for="getirrestaurantkey" class="fontstylecontent">Restaurant Secret Key</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div id="trendyolallcontainer">
+                <div class="container-fluid">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="trendyolkey" class="form-control" placeholder=" " />
+                                <label for="trendyolkey" class="fontstylecontent">Api Key</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="trendyolrestaurantkey" class="form-control" placeholder=" " />
+                                <label for="trendyolrestaurantkey" class="fontstylecontent">Api Secret Key</label>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="trendyolsuperkey" class="form-control" placeholder=" " />
+                                <label for="trendyolsuperkey" class="fontstylecontent">Suplier Id</label>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+
+            <div id="yemeksepetiallcontainer">
+                <div class="container-fluid">
+
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="yemeksepetiusername" class="form-control" placeholder=" " />
+                                <label for="yemeksepetiusername" class="fontstylecontent">User Name</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-12">
+                            <div class="mb-3 floating-label mb-4">
+                                <input type="password" id="yemeksepetipassword" class="form-control" placeholder=" " />
+                                <label for="yemeksepetipassword" class="fontstylecontent">Password</label>
+                            </div>
+                        </div>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-md-6">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="yemeksepeticatalog" class="form-control" placeholder=" " />
+                                <label for="yemeksepeticatalog" class="fontstylecontent">Catalog Name</label>
+                            </div>
+                        </div>
+                        <div class="col-md-6">
+                            <div class="mb-3 floating-label mb-4">
+                                <input id="yemeksepeticatalogid" class="form-control" placeholder=" " />
+                                <label for="yemeksepeticatalogid" class="fontstylecontent">Catalog Id</label>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+            <div class="row">
+                <div class="col">
+                    <div class="container">
+                        <button type="button" id="submitbutton">Restoran Ekle</button>
+                    </div>
+                </div>
+            </div>
+
+
+        </form>
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+    <script src="/js/main.js"></script>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+        integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"
+        integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

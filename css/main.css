@@ -1,0 +1,67 @@
+
+:root {
+    --blue: #1e90ff;
+    --white: #ffffff;
+    --mygray: #0000007d;
+    --red : #ff0000b1;
+}
+
+body{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+#formcontainer{
+    width: 50%;
+    height: 50%;
+    margin-top: 4%;
+}
+
+
+.fontstylecontent{
+    font-family: "Bahnschrift SemiBold"i;
+    
+}
+
+.radiocontainer{
+    border: 1px solid var(--mygray);
+    border-radius: 5px;
+}
+
+.hrtag{
+    margin-top: 30px;
+    margin-bottom: 30px;
+    color: var(--mygray);
+}
+
+#submitbutton{
+    padding: 10px;
+    background-color: transparent;
+    border-radius: 5px;
+    width: 100%;
+    border: 1px solid rgb(255, 132, 0);
+    color: rgb(255, 132, 0);
+}
+
+#getirallcontainer,#trendyolallcontainer,#yemeksepetiallcontainer,
+#getir_acor,#trendyol_acor,#yemeksepeti_acor{
+    display: none;
+
+}
+
+
+.collapseclass{
+    width: 100%;
+    border: 1px solid rgb(37, 150, 190);
+    padding: 8px;
+    background: transparent;
+    border-radius: 8px;
+    color: rgb(37, 150, 190);
+}
+
+.downicon{
+    float: right;
+    margin-top: 5px;
+}
