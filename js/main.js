@@ -62,7 +62,7 @@ function border_check(id) {
         getir.children[0].style.border = "1px solid blue"
         trendyol.children[0].style.border = "1px solid gray"
         yemeksepeti.children[0].style.border = "1px solid gray"
-       
+
     } else if (id == "trendyol") {
         getir.children[0].style.border = "1px solid gray"
         trendyol.children[0].style.border = "1px solid blue"
@@ -91,10 +91,7 @@ function secret_all_container(id) {
             up_container_control("yemeksepeti", rows_length);
         }
 
-        add_rest_button.style.background = "transparent";
-        add_rest_button.style.border = "1px solid rgb(255, 132, 0)";
-        add_rest_button.style.color = "rgb(255, 132, 0)";
-        add_rest_button.innerHTML = "Restoran Ekle"
+        success_button(2);
 
         getir_all_container.style.display = "block";
         trendyol_all_container.style.display = "none";
@@ -114,10 +111,7 @@ function secret_all_container(id) {
             up_container_control("yemeksepeti", rows_length);
         }
 
-        add_rest_button.style.background = "transparent";
-        add_rest_button.style.border = "1px solid rgb(255, 132, 0)";
-        add_rest_button.style.color = "rgb(255, 132, 0)";
-        add_rest_button.innerHTML = "Restoran Ekle"
+        success_button(2);
 
         getir_all_container.style.display = "none";
         trendyol_all_container.style.display = "block";
@@ -137,11 +131,7 @@ function secret_all_container(id) {
             up_container_control("getir", rows_length);
         }
 
-        add_rest_button.style.background = "transparent";
-        add_rest_button.style.border = "1px solid rgb(255, 132, 0)";
-        add_rest_button.style.color = "rgb(255, 132, 0)";
-        add_rest_button.innerHTML = "Restoran Ekle"
-
+        success_button(2);
         getir_all_container.style.display = "none";
         trendyol_all_container.style.display = "none";
         yemeksepeti_all_container.style.display = "block";
@@ -212,7 +202,7 @@ function up_container_control(id, rows_len) {
         success_button(1);
 
         getir_close = true;
-        
+
         console.log("Rows lentg getir : " + rows_len)
 
         if (rows_len - 1 == 2) {
@@ -250,7 +240,7 @@ function up_container_control(id, rows_len) {
         success_button(1);
 
         trendyol_close = true;
-       
+
         console.log("Rows lentg trendyol : " + rows_len)
 
         if (rows_len - 1 == 2) {
@@ -338,9 +328,44 @@ function uzunluk() {
 
 }
 
+function last_ghost_container(){
+    var status = 0;
+    var not_none;
+    var rows_data = document.querySelector("#allcontainer");
+    for (var i = 0; i < rows_data.children.length; i++) {
+        if (rows_data.children[i].style.display != "none") {
+            status+=1;
+            not_none = rows_data.children[i];
+        }
+    }
+    if(status == 1){
+        not_none.style.display = "none";
+    }
+    
+}
+
+function last_up_container(){
+    var status = 0;
+    var not_none;
+    var rows_data = document.querySelector("#rowschild");
+    for (var i = 0; i < rows_data.children.length; i++) {
+        if (rows_data.children[i].style.display != "none") {
+            status+=1;
+            not_none = rows_data.children[i];
+        }
+    }
+    if(status == 1){
+        not_none.style.display = "none";
+    }
+}
+
 add_rest_button.addEventListener("click", (e) => {
 
     uzunluk();
     console.log(rows_length);
+
+    last_ghost_container();
+    last_up_container();
+
     up_container_control(check_radio_button, rows_length);
 })
