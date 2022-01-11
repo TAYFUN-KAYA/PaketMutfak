@@ -364,7 +364,10 @@ add_rest_button.addEventListener("click", (e) => {
     uzunluk();
     console.log(rows_length);
 
-    last_ghost_container();
+    if(rows_length == 1){
+        last_ghost_container();
+    }
+    
     last_up_container();
 
     up_container_control(check_radio_button, rows_length);

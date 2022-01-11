@@ -1,7 +1,3 @@
-
-
-
-
 function firstsinglechar(metin) {
     var find;
     for(var i=0;i<metin.length;i++){
