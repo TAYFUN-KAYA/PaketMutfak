@@ -15,7 +15,6 @@ phone_input.addEventListener("input", (e) => {
 
 $(document).ready(function () {
     $("#phonenumber").on("keyup", function () {
-
         var value = $(this).val();
         $(this).val($(this).data("initial") + value.substring(3));
     });
